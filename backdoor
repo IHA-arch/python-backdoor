@@ -1,0 +1,16 @@
+#!/bin/bash
+
+usage() {
+printf "Usage : backdoor create => Create a backdoor\n"
+printf "	backdoor listen => listening for incomming connection\n"
+}
+age=`echo $1`
+if [[ $age == '' ]]; then
+	usage
+elif [[ $age == 'create' ]]; then
+	bash /usr/share/backdoor_IHA/backdoor-python.sh
+elif [[ $age == 'listen' ]]; then
+	python3 /usr/share/backdoor_IHA/listen.py
+else
+	usage
+fi
